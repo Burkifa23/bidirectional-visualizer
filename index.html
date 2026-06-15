@@ -234,19 +234,20 @@
 
         @media (max-width: 850px) {
             body {
-                flex-direction: column-reverse;
-                overflow: hidden;
-                height: 100vh;
+                flex-direction: column;
+                overflow-y: auto;
+                height: auto;
             }
 
             #sidebar {
                 width: 100%;
-                height: 52vh;
-                max-height: 52vh;
+                height: auto;
+                max-height: none;
                 border-right: none;
                 border-top: 1px solid var(--panel-border);
                 padding: 16px;
                 gap: 10px;
+                overflow-y: visible;
             }
 
             .header-panel {
@@ -273,8 +274,10 @@
 
             #canvas-container {
                 width: 100%;
-                height: 48vh;
+                height: 50vh;
+                min-height: 350px;
                 flex-grow: unset;
+                flex-shrink: 0;
             }
 
             #legend {
